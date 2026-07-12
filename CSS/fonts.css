@@ -1,0 +1,20 @@
+@font-face {
+    font-family:"Vazirmatn";
+    src: url("../fonts/ttf/Vazirmatn-Regular.ttf")format("truetype");
+}
+@font-face {
+    font-family:"Vazirmatn Medium";
+    src: url("../fonts/ttf/Vazirmatn-Medium.ttf")format("truetype");
+}
+@font-face {
+    font-family:"Vazirmatn Bold";
+    src: url("../fonts/ttf/Vazirmatn-Bold.ttf")format("truetype");
+}
+@font-face {
+    font-family:"Vazirmatn SemiBold";
+    src: url("../fonts/ttf/Vazirmatn-SemiBold.ttf")format("truetype");
+}
+@font-face {
+    font-family:"Vazirmatn Black";
+    src: url("../fonts/ttf/Vazirmatn-Black.ttf")format("truetype");
+}

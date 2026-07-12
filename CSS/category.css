@@ -1,0 +1,234 @@
+@import"fonts.css";
+@import"grid.css";
+@import"reset.css";
+@import"header.css";
+@import"footer.css";
+@import"product-category.css";
+@import"modal-product.css";
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+body {
+    font-family: "Vazirmatn";
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    background-color: #FAFAFA;
+    position: relative;
+}
+
+
+/* 
+Helper Classes
+*/
+.align-center {
+    align-self: center;
+}
+
+.margin-bottom {
+    margin-bottom: 5rem;
+}
+
+/* 
+Component Classes
+*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+.hidden {
+    display: none;
+}
+
+/* 
+Main
+*/
+/* 
+===============
+  Categories
+===============
+*/
+.categories {
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: 1px solid #eee;
+    padding: 2rem;
+}
+
+.categories__title {
+    display: block;
+    margin-bottom: 3rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding-right: 1rem;
+}
+
+.categories-list {
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+}
+
+.categories-list__item {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #757575;
+    padding: 1rem;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+}
+
+.categories-list__item:hover {
+    color: rgb(36, 70, 245);
+    background-color: #f2f7ff;
+}
+
+.categories-list__item:last-child {
+    margin-bottom: 0;
+}
+
+.categories-list__link {
+    font-size: inherit;
+    color: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categories-list__link-text {}
+
+.categories-list__link-icon {
+    display: none;
+}
+
+.categories-list__item:hover .categories-list__link-icon {
+    display: block;
+}
+
+/* 
+====================
+  Category Header
+====================
+*/
+.category-header {
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: 1px solid #eee;
+    padding: 2rem 1rem;
+    color: rgb(26, 28, 35);
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.category-header__link {}
+
+.category-header__link-icon {}
+
+.category-header__link-text {}
+
+.category-header__icon {
+    font-size: 1rem;
+}
+
+.category-header__text {}
+
+/* 
+Responsive
+*/
+
+@media screen and (max-width:992px) {
+    .categories {
+        padding: 2rem 0 0 0;
+    }
+
+    .categories-list {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border-top: 1px solid #eee;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-right: 1rem;
+    }
+
+    .categories-list__item {
+        color: rgb(36, 70, 245);
+        border: 1px solid rgb(36, 70, 245);
+        border-radius: 1.5rem;
+        -webkit-border-radius: 1.5rem;
+        -moz-border-radius: 1.5rem;
+        -ms-border-radius: 1.5rem;
+        -o-border-radius: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    .categories-list__item:hover {
+        color: inherit;
+        background-color: transparent;
+    }
+
+    .categories-list__item:hover .categories-list__link-icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .categories-list {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .categories-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .categories-list__item {
+        flex: 0 0 auto;
+    }
+}
